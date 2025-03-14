@@ -12,7 +12,7 @@ const NavBar = ({
 	return (
 		<nav>
 			<ul
-				className={`md:flex items-center gap-x-5 md:static absolute md:p-0 p-5 transition-all duration-300 ${
+				className={`md:flex items-center bg-[#eeeeee] dark:bg-[#222831] gap-x-5 md:static absolute md:p-0 p-5 transition-all duration-300 ${
 					isOpen ? 'top-20 left-0 w-full' : 'top-[-300px] left-0 w-full'
 				}`}
 			>
