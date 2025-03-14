@@ -1,6 +1,5 @@
-import emailjs from '@emailjs/browser'
 import { SubmitHandler, useForm } from 'react-hook-form'
-import toast from 'react-hot-toast'
+import sendEmailMessage from '../utils/sendEmailMessage'
 
 type InputTypes = Record<'name' | 'email' | 'message', string>
 
@@ -13,21 +12,7 @@ const Contact = () => {
 	} = useForm<InputTypes>()
 
 	const onSubmit: SubmitHandler<InputTypes> = data => {
-		const serviceId = import.meta.env.VITE_SERVICE_ID
-		const templateId = import.meta.env.VITE_TEMPLATE_ID
-		const publicKey = import.meta.env.VITE_PUBLIC_KEY
-
-		emailjs
-			.send(serviceId, templateId, data, publicKey)
-			.then(response => {
-				console.log('Email sent:', response)
-				toast.success('Message sent successfully!')
-				reset()
-			})
-			.catch(error => {
-				console.error('Email error:', error)
-				toast.error('Failed to send message')
-			})
+		sendEmailMessage(data, reset)
 	}
 
 	return (
