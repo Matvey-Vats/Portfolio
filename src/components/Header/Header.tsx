@@ -1,5 +1,4 @@
 import { useState } from 'react'
-import CvButton from '../CvButton'
 import MenuBurger from '../MenuBurger'
 import ThemeToggle from '../ThemeToggle'
 import Logo from './Logo'
@@ -18,9 +17,7 @@ const Header = () => {
 
 					<div className='flex items-center gap-x-5'>
 						<MenuBurger menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-						<div className='max-md:hidden'>
-							<CvButton />
-						</div>
+						<div className='max-md:hidden'>{/* <CvButton /> */}</div>
 						<ThemeToggle />
 					</div>
 				</div>

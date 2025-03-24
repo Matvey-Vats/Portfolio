@@ -1,5 +1,3 @@
-import CvButton from './CvButton'
-
 const skills = [
 	'Html',
 	'Css',
@@ -49,7 +47,7 @@ const About = () => {
 							of coding, I enjoy staying active, learning new skills, and
 							exploring creative outlets like playing the guitar.
 						</p>
-						<CvButton />
+						{/* <CvButton /> */}
 					</div>
 				</div>
 			</div>
