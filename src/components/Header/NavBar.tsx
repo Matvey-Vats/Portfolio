@@ -1,5 +1,3 @@
-import CvButton from '../CvButton'
-
 const NavBar = ({
 	isOpen,
 	setIsOpen,
@@ -41,9 +39,9 @@ const NavBar = ({
 						<span className='absolute bottom-0 left-0 w-0 h-0.5 bg-[#222831] dark:bg-white transition-all duration-300 group-hover:w-full'></span>
 					</a>
 				</li>
-				<li className='md:hidden'>
+				{/* <li className='md:hidden'>
 					<CvButton />
-				</li>
+				</li> */}
 			</ul>
 		</nav>
 	)
